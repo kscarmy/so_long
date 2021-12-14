@@ -4,6 +4,8 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
+MLXFLAGS = -I /usr/X11/include -g -L /usr/X11/lib -lX11 -lmlx -lXext -Lmlx -lmlx -framework OpenGL -framework AppKit
+
 GNL_C = gnl/get_next_line.c\
 		gnl/get_next_line_utils.c\
 
@@ -16,6 +18,9 @@ SRC_C = srcs/ft_error_1.c\
 		srcs/ft_parsing_map_map.c\
 		srcs/ft_parsing_map_utils.c\
 		srcs/ft_utils_1.c\
+		srcs/ft_window.c\
+		srcs/ft_disp_image.c\
+		srcs/ft_move.c\
 
 MAIN_C = srcs/main.c\
 
@@ -30,12 +35,15 @@ OBJS =		get_next_line.o\
 			ft_parsing_map_map.o\
 			ft_parsing_map_utils.o\
 			ft_utils_1.o\
+			ft_window.o\
+			ft_disp_image.o\
+			ft_move.o\
 
 
 all : $(NAME)
 
 $(NAME) :
-	@$(CC) $(CFLAGS) $(MAIN_C) $(SRC_C) $(GNL_C) -o $(NAME)
+	@$(CC) $(CFLAGS) $(MAIN_C) $(SRC_C) $(GNL_C) $(MLXFLAGS) -o $(NAME)
 #-g3 -fsanitize=leak
 clean :
 	@rm -rf $(OBJS)

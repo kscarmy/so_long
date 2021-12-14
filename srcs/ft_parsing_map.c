@@ -6,11 +6,28 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:45:32 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/13 19:59:19 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/13 20:14:59 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+
+// int		ft_is_rectangular(m_point *map)
+// {
+// 	int i;
+// 	int u;
+// 	int ref;
+
+// 	i = 0;
+// 	u = 0;
+// 	ref = 0;
+// 	while 
+// 	while (u < map->l)
+// 	{
+		
+// 		u++;
+// 	}
+// }
 
 void	ft_strfreejoin_newline(m_point *map, char *buff)
 {

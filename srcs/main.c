@@ -17,5 +17,6 @@ int main(int argc, char **argv)
 		return (-1);
 	// ft_disp_verif(&map);
 	// ft_disp_map(map.map);
+	ft_windows(&map);
 	return (ft_exit_free_map(&map, 0));
 }

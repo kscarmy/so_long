@@ -6,7 +6,7 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 13:25:39 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/13 19:34:53 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/14 01:20:36 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,27 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# include "../mlx/mlx.h"
 
 # include <stdio.h>
 
 # define BUFFER_SIZE 42
+# define KEY_MOVE_FRONT 13 // old 122 ?
+# define KEY_MOVE_BACK 1 // old 100 ?
+# define KEY_MOVE_LEFT 0 // old 113 ?
+# define KEY_MOVE_RIGHT 2 // old 115 ?
+# define KEY_ROTATE_LEFT 123 // old 65361 ?
+# define KEY_ROTATE_RIGHT 124 // old 65363 ?
+# define KEY_ECHAP 53 // old 65307 ?
+# define VERTICAL_SIZE 1000
+# define HORIZONTAL_SIZE 500
+# define CUB_SIZE 32
+# define WALL "./ress/wall32.xpm"
+# define COLLEC "./ress/collec32.xpm"
+# define EXIT "./ress/exit32.xpm"
+# define PLAYER "./ress/player32.xpm"
+# define GROUND "./ress/ground32.xpm"
+# define GOELAND "./ress/goeland.xpm"
 
 //GNL
 
@@ -50,23 +67,16 @@ typedef struct	j_point
 	int		ry; // résolution : hauteur
 	int		x; // tete de lecture utilisé dans : file, 
 	char	*file; // contien une copie fichier à lire.
-	// int 	res; // de base res = 0, si la résolution est définie alors res = 1
-	// int		fr; // Floor : Red
-	// int		fg; // Floor : Green
-	// int		fb; // Floor : Blue
-	// int		floor; // de base floor = 0, si la couleur du sol est définie alors floor = 1
-	// int		cr; // Ceiling : Red
-	// int		cg; // Ceiling : Green
-	// int		cb; // Ceiling : Blue
-	// int		ceiling; // de base ceiling = 0, si la couleur du sol est définie alors ceiling = 1
-	// char	*no; // ./path_to_the_north_texture
-	// char	*so; // ./path_to_the_south_texture
-	// char	*we; // ./path_to_the_west_texture
-	// char	*ea; // ./path_to_the_east_texture
-	// char	*s; // ./path_to_the_sprite_texture
 	char	spawn; // Position de spawn du joueur
 	char	**map; // La map mdrr
 	int		l; // nombre de lignes de la map
+	void	*mlx;
+	void	*win1;
+	void	*wall;
+	void	*collec;
+	void	*exit;
+	void	*player;
+	void	*ground;
 }				m_point;
 
 int				ft_exor_nfn(int error); // exit error no free need, int error où error correspond au numéro du message à afficher en sortie.
@@ -97,5 +107,15 @@ void			ft_map_disp_error(m_point *map, int l, int x, int erreur); // indique où
 int				ft_next_zero_char(char c); // Liste des caractères valides dans map.
 void			ft_error_detected(m_point *map); // affiche ou est l'erreur.
 
+// ft_window.c
+int		ft_entry_keyboard(int key, void *p);
+void	ft_exit_free_all(m_point *map, int ret);
+void	ft_windows(m_point *map);
+int    ft_cross_is_red(m_point *map);
+
+// ft_disp_image.c
+void	ft_disp_image(m_point *map, int x, int y, char c);
+void	ft_init_img(m_point *map);
+void	ft_screen(m_point *map);
 
 #endif
