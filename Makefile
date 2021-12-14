@@ -21,6 +21,7 @@ SRC_C = srcs/ft_error_1.c\
 		srcs/ft_window.c\
 		srcs/ft_disp_image.c\
 		srcs/ft_move.c\
+		srcs/ft_verif_map.c\
 
 MAIN_C = srcs/main.c\
 
@@ -38,6 +39,7 @@ OBJS =		get_next_line.o\
 			ft_window.o\
 			ft_disp_image.o\
 			ft_move.o\
+			ft_verif_map.o\
 
 
 all : $(NAME)
