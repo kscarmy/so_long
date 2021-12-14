@@ -6,7 +6,7 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 13:25:39 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/14 02:49:04 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/14 12:47:45 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,5 +124,6 @@ void	ft_screen(m_point *map);
 void	ft_move_in(m_point *map, char c);
 void	ft_move_wasd(m_point *map, int key);
 void	ft_init_move(m_point *map);
+void	ft_end_game(m_point *map);
 
 #endif

@@ -22,6 +22,16 @@ void	ft_move_in(m_point *map, char c)
 		map->map[map->py][map->px] = 'P';
 	map->m_count = map->m_count + 1;
 	printf("Player moved %d time\n", map->m_count);
+	ft_end_game(map);
+}
+
+void	ft_end_game(m_point *map)
+{
+	if (map->map[map->py][map->px] == 'X' && map->c_count == 0)
+	{
+		printf("You win !\n");
+		ft_exit_free_all(map, 0);
+	}
 }
 
 void	ft_move_wasd(m_point *map, int key)
@@ -62,3 +72,4 @@ void	ft_init_move(m_point *map)
 		i++;
 	}
 }
+
