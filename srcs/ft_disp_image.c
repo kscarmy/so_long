@@ -25,7 +25,7 @@ void	ft_disp_image(m_point *map, int x, int y, char c)
 		mlx_put_image_to_window(map->mlx, map->win1, map->collec, x, y);
 	if (c == 'E')
 		mlx_put_image_to_window(map->mlx, map->win1, map->exit, x, y);
-	if (c == 'P')
+	if (c == 'P' || c == 'X')
 		mlx_put_image_to_window(map->mlx, map->win1, map->player, x, y);
 	if (c == '0')
 		mlx_put_image_to_window(map->mlx, map->win1, map->ground, x, y);

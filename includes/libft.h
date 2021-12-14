@@ -6,7 +6,7 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 13:25:39 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/14 01:20:36 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/14 02:49:04 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,10 @@
 # include <stdio.h>
 
 # define BUFFER_SIZE 42
-# define KEY_MOVE_FRONT 13 // old 122 ?
-# define KEY_MOVE_BACK 1 // old 100 ?
+# define KEY_MOVE_UP 13 // old 122 ?
+# define KEY_MOVE_DOWN 1 // old 100 ?
 # define KEY_MOVE_LEFT 0 // old 113 ?
 # define KEY_MOVE_RIGHT 2 // old 115 ?
-# define KEY_ROTATE_LEFT 123 // old 65361 ?
-# define KEY_ROTATE_RIGHT 124 // old 65363 ?
 # define KEY_ECHAP 53 // old 65307 ?
 # define VERTICAL_SIZE 1000
 # define HORIZONTAL_SIZE 500
@@ -77,6 +75,10 @@ typedef struct	j_point
 	void	*exit;
 	void	*player;
 	void	*ground;
+	int		px;
+	int		py;
+	int		c_count; // nombre ditem restant
+	int		m_count; // nombre de deplacement effectue
 }				m_point;
 
 int				ft_exor_nfn(int error); // exit error no free need, int error où error correspond au numéro du message à afficher en sortie.
@@ -117,5 +119,10 @@ int    ft_cross_is_red(m_point *map);
 void	ft_disp_image(m_point *map, int x, int y, char c);
 void	ft_init_img(m_point *map);
 void	ft_screen(m_point *map);
+
+// ft_move.c
+void	ft_move_in(m_point *map, char c);
+void	ft_move_wasd(m_point *map, int key);
+void	ft_init_move(m_point *map);
 
 #endif
