@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_disp_image.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/14 18:22:31 by guderram          #+#    #+#             */
+/*   Updated: 2021/12/14 18:22:44 by guderram         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/libft.h"
 
 void	ft_init_img(m_point *map)
 {
-	int size;
+	int	size;
 
 	size = CUB_SIZE;
 	map->wall = mlx_xpm_file_to_image(map->mlx, WALL, &size, &size);
@@ -11,11 +23,6 @@ void	ft_init_img(m_point *map)
 	map->player = mlx_xpm_file_to_image(map->mlx, PLAYER, &size, &size);
 	map->ground = mlx_xpm_file_to_image(map->mlx, GROUND, &size, &size);
 }
-
-// void	ft_disp_image(m_point *map, int x, int y, void *img)
-// {
-// 	mlx_put_image_to_window(map->mlx, map->win1, img, x, y);
-// }
 
 void	ft_disp_image(m_point *map, int x, int y, char c)
 {
@@ -31,11 +38,9 @@ void	ft_disp_image(m_point *map, int x, int y, char c)
 		mlx_put_image_to_window(map->mlx, map->win1, map->ground, x, y);
 }
 
-// void	ft_load_image(m_point *map, int x, int y)
-
 void	ft_screen(m_point *map)
 {
-	int i;
+	int	i;
 	int	u;
 
 	i = 0;

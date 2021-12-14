@@ -6,7 +6,7 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 13:25:39 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/14 13:14:31 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/14 20:07:43 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,5 +129,12 @@ void	ft_end_game(m_point *map);
 // ft_verif_map.c
 void		ft_verif_something(m_point *map);
 void		ft_verif_count(m_point *map);
+
+// ft_check_file_name.c
+int	ft_check_file_name_bis(int extension, int exist, int u);
+
+// ft_parsing_map_map.c
+int	ft_create_mapping_bis(m_point *map, int *one);
+void	ft_parse_map_bis(m_point *map);
 
 #endif

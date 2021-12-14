@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_move.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/14 18:33:21 by guderram          #+#    #+#             */
+/*   Updated: 2021/12/14 18:33:44 by guderram         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/libft.h"
 
 void	ft_move_in(m_point *map, char c)
@@ -48,8 +60,8 @@ void	ft_move_wasd(m_point *map, int key)
 
 void	ft_init_move(m_point *map)
 {
-	int i;
-	int u;
+	int	i;
+	int	u;
 
 	i = 0;
 	u = 0;
@@ -72,4 +84,3 @@ void	ft_init_move(m_point *map)
 		i++;
 	}
 }
-
