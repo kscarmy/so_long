@@ -1,22 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/15 16:58:10 by guderram          #+#    #+#             */
+/*   Updated: 2021/12/15 17:00:32 by guderram         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/libft.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-    m_point map; // déclaration de la structure "map".
+	m_point	map;
 
 	if (argc != 2)
-		return(ft_exor_nfn(1));
-
+		return (ft_exor_nfn(1));
 	if (ft_check_file_name(argv[1], 1) != 0)
 		return (-1);
 	ft_init_map(&map);
-		// return(ft_exor_nfn(4)); // Dans le cas où je dois malloc des données dans ft_init_map
-	// ft_disp_verif(&map);
-	// return(0);
-	if (ft_parsing_map(&map, argv[1]) == -1) // parsing du fichier
+	if (ft_parsing_map(&map, argv[1]) == -1)
 		return (-1);
-	// ft_disp_verif(&map);
-	// ft_disp_map(map.map);
 	ft_verif_something(&map);
 	if (map.error == 0)
 		ft_windows(&map);

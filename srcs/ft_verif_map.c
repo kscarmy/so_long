@@ -1,15 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_verif_map.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/15 16:54:49 by guderram          #+#    #+#             */
+/*   Updated: 2021/12/15 16:57:54 by guderram         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/libft.h"
 
-void		ft_verif_something(m_point *map)
+void	ft_verif_something(m_point *map)
 {
-	int i;
-	int u;
+	int	i;
+	int	u;
 
 	i = 0;
 	u = 0;
-	map->rx = 0; // pour P
-	map->ry = 0; // pour E
-	map->x = 0; // pour C
+	map->rx = 0;
+	map->ry = 0;
+	map->x = 0;
 	while (i < map->l)
 	{
 		while (map->map[i][u] != '\0')
@@ -28,7 +40,7 @@ void		ft_verif_something(m_point *map)
 	ft_verif_count(map);
 }
 
-void		ft_verif_count(m_point *map)
+void	ft_verif_count(m_point *map)
 {
 	if (map->rx != 1)
 	{
