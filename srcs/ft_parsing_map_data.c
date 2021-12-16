@@ -6,7 +6,7 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:36:31 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/14 20:09:06 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/15 17:19:49 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_parsing_get_path(m_point *map, int z)
 
 	u = 0;
 	k = 0;
-	while (ft_is_space(map->file[map->x + z + u], 1, 1, map) == 0)
+	while (ft_is_space(map->file[map->x + z + u], 1, 1) == 0)
 		u++;
 	str = malloc(sizeof(char) * (u + 1));
 	while (str != NULL && map->error == 0 && k < u)

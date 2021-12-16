@@ -6,21 +6,19 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:45:32 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/05 14:47:02 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/15 17:21:50 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	// printf("bon %s\n", str);
 	while (str != NULL && str[i] != '\0')
 		i++;
-	// printf("\nfrrr\n");
 	return (i);
 }
 
@@ -29,13 +27,18 @@ char	*ft_strnew(int *error)
 	char	*str;
 
 	str = malloc(sizeof(char) * 1);
-	if ((*error = (str == NULL) ? 1 : 0) == 1)
+	if (str == NULL)
+	{
+		*error = 1;
 		return (NULL);
+	}
+	else
+		*error = 0;
 	str[0] = '\0';
 	return (str);
 }
 
-int		ft_strchr(char *str)
+int	ft_strchr(char *str)
 {
 	int	i;
 
@@ -49,9 +52,9 @@ int		ft_strchr(char *str)
 	return (1);
 }
 
-int		ft_strcount(char *str)
+int	ft_strcount(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0' && str[i] != '\n')
@@ -69,7 +72,7 @@ void	ft_strjoin(char **str, const char *buff, int buff_size, int *error)
 	u = 0;
 	tmp = *str;
 	*str = malloc(sizeof(char) * (ft_strlen(tmp) + buff_size + 1));
-	if ((*error = (*str == NULL) ? 1 : 0) == 0)
+	if (*str != NULL)
 	{
 		while (tmp[i] != '\0')
 		{
@@ -83,5 +86,7 @@ void	ft_strjoin(char **str, const char *buff, int buff_size, int *error)
 		}
 		(*str)[i + u] = '\0';
 	}
+	else
+		*error = 1;
 	ft_strdel(&tmp);
 }

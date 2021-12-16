@@ -6,7 +6,7 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 13:25:39 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/15 16:40:19 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/16 17:14:48 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,12 @@
 # define KEY_ECHAP 53 // old 65307 ?
 # define VERTICAL_SIZE 1000
 # define HORIZONTAL_SIZE 500
-# define CUB_SIZE 32
-# define WALL "./ress/wall32.xpm"
-# define COLLEC "./ress/collec32.xpm"
-# define EXIT "./ress/exit32.xpm"
-# define PLAYER "./ress/player32.xpm"
-# define GROUND "./ress/ground32.xpm"
-# define GOELAND "./ress/goeland.xpm"
+# define CUB_SIZE 16
+# define WALL "./ress/img_16/wall16.xpm"
+# define COLLEC "./ress/img_16/collec16.xpm"
+# define EXIT "./ress/img_16/exit16.xpm"
+# define PLAYER "./ress/img_16/player16.xpm"
+# define GROUND "./ress/img_16/ground16.xpm"
 
 //GNL
 
@@ -49,7 +48,8 @@ void	ft_strjoin(char **str, const char *buff, int buff_size, int *error);
 char	*ft_strsub(char const *s, unsigned int start, size_t len, int **error);
 void	ft_read(char **str, char **line, int ret, int *error);
 int		ft_exerror(char **str, int error);
-
+char	*ft_strsub_bis(int **error);
+int		get_next_line_bis(int error, int ret, char *str);
 
 // ft_utils_1.c
 int	ft_atoi(const char *nptr);
@@ -93,7 +93,7 @@ void			ft_strfreejoin_newline(m_point *map, char *buff); // rajoute toutes les l
 void			ft_parsing_path_to(m_point *map); // cherche le nom des données.
 char			*ft_parsing_get_path(m_point *map, int z); // remplis la struct du nom trouvé et de ses infos.
 int				ft_incre_spaces(m_point *map, int backn, int h);  // retourne u espaces rencontré dans map->fil[map->x + h] ou h est un head
-int				ft_is_space(char c, int backn, int end, m_point *map); // classe tout caractère pouvant être classé comme espace.
+int				ft_is_space(char c, int backn, int end); // classe tout caractère pouvant être classé comme espace.
 int				ft_is_color(int color); // Si color faux return 1, sinon 0
 void			ft_check_file_half(m_point *map); // vérification des datas du fichiers
 void			ft_check_map(m_point *map); // call toutes les merdes pour la map

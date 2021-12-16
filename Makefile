@@ -8,6 +8,7 @@ MLXFLAGS = -I /usr/X11/include -g -L /usr/X11/lib -lX11 -lmlx -lXext -Lmlx -lmlx
 
 GNL_C = gnl/get_next_line.c\
 		gnl/get_next_line_utils.c\
+		gnl/get_next_line_bis.c\
 
 SRC_C = srcs/ft_error_1.c\
 		srcs/ft_check_file_name.c\
@@ -27,6 +28,7 @@ MAIN_C = srcs/main.c\
 
 OBJS =		get_next_line.o\
 			get_next_line_utils.o\
+			get_next_line_bis.o\
 			ft_error_1.o\
 			ft_check_file_name.o\
 			ft_structs.o\

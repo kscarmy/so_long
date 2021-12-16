@@ -1,46 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parsing_utils.c                                 :+:      :+:    :+:   */
+/*   get_next_line_bis.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/31 12:45:32 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/15 17:19:30 by guderram         ###   ########.fr       */
+/*   Created: 2021/12/16 17:00:36 by guderram          #+#    #+#             */
+/*   Updated: 2021/12/16 17:01:17 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_incre_spaces(m_point *map, int backn, int h)
+int	ft_exerror(char **str, int error)
 {
-	int	u;
-
-	u = 0;
-	while (ft_is_space(map->file[map->x + u + h], backn, 0) > 0)
-		u++;
-	return (u);
+	ft_strdel(&*str);
+	if (error == 1)
+		return (-1);
+	return (0);
 }
 
-int	ft_is_space(char c, int backn, int end)
+void	ft_strdel(char **as)
 {
-	int	x;
-
-	x = 0;
-	if (c == ' ')
-		x++;
-	if (c == '\n' && backn == 1)
-		x++;
-	if (c == '\t')
-		x++;
-	if (c == '\0' && end == 1)
-		x++;
-	return (x);
-}
-
-int	ft_is_color(int color)
-{
-	if (color >= 0 && color <= 255)
-		return (0);
-	return (1);
+	if (as != NULL)
+	{
+		free(*as);
+		*as = NULL;
+	}
 }
