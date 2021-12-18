@@ -4,7 +4,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-MLXFLAGS = -I /usr/X11/include -g -L /usr/X11/lib -lX11 -lmlx -lXext -Lmlx -lmlx -framework OpenGL -framework AppKit
+MLXFLAGS = -I /usr/X11/include -lmlx -Lmlx -lmlx -framework OpenGL -framework AppKit
 
 GNL_C = gnl/get_next_line.c\
 		gnl/get_next_line_utils.c\

@@ -16,7 +16,7 @@ int	ft_create_mapping_bis(t_point *map, int *one)
 {
 	int	u;
 
-	u = map->x;
+	u = 0;
 	while (map->file[u] != '\0')
 	{
 		if (map->file[u] == '\n' && one == 0 && u != map->x)

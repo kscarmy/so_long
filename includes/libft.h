@@ -26,12 +26,12 @@
 # define KEY_ECHAP 53
 # define VERTICAL_SIZE 1000
 # define HORIZONTAL_SIZE 500
-# define CUB_SIZE 32
-# define WALL "./ress/img_32/wall32.xpm"
-# define COLLEC "./ress/img_32/collec32.xpm"
-# define EXIT "./ress/img_32/exit32.xpm"
-# define PLAYER "./ress/img_32/player32.xpm"
-# define GROUND "./ress/img_32/ground32.xpm"
+# define CUB_SIZE 16
+# define WALL "./ress/img_16/wall16.xpm"
+# define COLLEC "./ress/img_16/collec16.xpm"
+# define EXIT "./ress/img_16/exit16.xpm"
+# define PLAYER "./ress/img_16/player16.xpm"
+# define GROUND "./ress/img_16/ground16.xpm"
 
 int		get_next_line(int fd, char **line);
 void	ft_strdel(char **as);
