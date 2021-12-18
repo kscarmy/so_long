@@ -24,7 +24,7 @@ SRC_C = srcs/ft_error_1.c\
 		srcs/ft_move.c\
 		srcs/ft_verif_map.c\
 
-MAIN_C = srcs/main.c\
+MAIN_C = srcs/ft_main.c\
 
 OBJS =		get_next_line.o\
 			get_next_line_utils.o\
@@ -48,7 +48,6 @@ all : $(NAME)
 
 $(NAME) :
 	@$(CC) $(CFLAGS) $(MAIN_C) $(SRC_C) $(GNL_C) $(MLXFLAGS) -o $(NAME)
-#-g3 -fsanitize=leak
 clean :
 	@rm -rf $(OBJS)
 

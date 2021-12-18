@@ -6,13 +6,13 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:45:32 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/15 17:19:30 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:22:41 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_incre_spaces(m_point *map, int backn, int h)
+int	ft_incre_spaces(t_point *map, int backn, int h)
 {
 	int	u;
 

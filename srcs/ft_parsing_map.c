@@ -6,13 +6,13 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 20:11:53 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/15 16:51:31 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:22:41 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_strfreejoin_newline_bis(m_point *map, char *buff, char *tmp)
+void	ft_strfreejoin_newline_bis(t_point *map, char *buff, char *tmp)
 {
 	int	i;
 	int	u;
@@ -33,7 +33,7 @@ void	ft_strfreejoin_newline_bis(m_point *map, char *buff, char *tmp)
 	map->file[i + u + 1] = '\0';
 }
 
-void	ft_strfreejoin_newline(m_point *map, char *buff)
+void	ft_strfreejoin_newline(t_point *map, char *buff)
 {
 	char	*tmp;
 	int		i;
@@ -50,7 +50,7 @@ void	ft_strfreejoin_newline(m_point *map, char *buff)
 	ft_strdel(&tmp);
 }
 
-void	ft_parsing_open_fd(m_point *map, char *argv)
+void	ft_parsing_open_fd(t_point *map, char *argv)
 {
 	int		ret;
 	int		fd;
@@ -77,7 +77,7 @@ void	ft_parsing_open_fd(m_point *map, char *argv)
 		map->error = 20;
 }
 
-int	ft_parsing_map(m_point *map, char *argv)
+int	ft_parsing_map(t_point *map, char *argv)
 {
 	int	m;
 

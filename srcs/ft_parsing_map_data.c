@@ -6,13 +6,13 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:36:31 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/15 17:19:49 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:22:41 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_parsing_get_path(m_point *map, int z)
+char	*ft_parsing_get_path(t_point *map, int z)
 {
 	char	*str;
 	int		u;
@@ -37,7 +37,7 @@ char	*ft_parsing_get_path(m_point *map, int z)
 	return (NULL);
 }
 
-void	ft_check_map(m_point *map)
+void	ft_check_map(t_point *map)
 {
 	if (map->error == 0)
 		ft_create_mapping(map);
@@ -47,7 +47,7 @@ void	ft_check_map(m_point *map)
 		ft_parse_map(map);
 }
 
-void	ft_fill_map(m_point *map)
+void	ft_fill_map(t_point *map)
 {
 	int	u;
 	int	i;

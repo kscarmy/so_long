@@ -6,13 +6,13 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 20:10:03 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/14 20:11:28 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:22:41 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_set_world_spawn(m_point *map, int u)
+void	ft_set_world_spawn(t_point *map, int u)
 {
 	if (map->spawn != '0')
 	{
@@ -61,7 +61,7 @@ int	ft_next_zero_char(char c)
 	return (x);
 }
 
-void	ft_next_zero_map(m_point *map, int l, int x)
+void	ft_next_zero_map(t_point *map, int l, int x)
 {
 	if (l == 0 || l == map->l - 1)
 		map->error = 970;

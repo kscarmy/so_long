@@ -6,13 +6,13 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:45:32 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/15 16:54:01 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:22:41 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_init_map(m_point *map)
+void	ft_init_map(t_point *map)
 {
 	map->error = 0;
 	map->spawn = '0';
@@ -21,7 +21,7 @@ void	ft_init_map(m_point *map)
 	map->map = NULL;
 }
 
-void	ft_disp_verif(m_point *map)
+void	ft_disp_verif(t_point *map)
 {
 	int	u;
 
@@ -33,7 +33,7 @@ void	ft_disp_verif(m_point *map)
 	}
 }
 
-int	ft_exit_free_map(m_point *map, int ret)
+int	ft_exit_free_map(t_point *map, int ret)
 {
 	int	i;
 

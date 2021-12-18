@@ -6,13 +6,13 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:33:21 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/14 18:33:44 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:22:41 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_move_in(m_point *map, char c)
+void	ft_move_in(t_point *map, char c)
 {
 	if (map->map[map->py][map->px] != 'X')
 		map->map[map->py][map->px] = '0';
@@ -37,7 +37,7 @@ void	ft_move_in(m_point *map, char c)
 	ft_end_game(map);
 }
 
-void	ft_end_game(m_point *map)
+void	ft_end_game(t_point *map)
 {
 	if (map->map[map->py][map->px] == 'X' && map->c_count == 0)
 	{
@@ -46,7 +46,7 @@ void	ft_end_game(m_point *map)
 	}
 }
 
-void	ft_move_wasd(m_point *map, int key)
+void	ft_move_wasd(t_point *map, int key)
 {
 	if (key == KEY_MOVE_UP && map->map[map->py - 1][map->px] != '1')
 		ft_move_in(map, 'u');
@@ -58,7 +58,7 @@ void	ft_move_wasd(m_point *map, int key)
 		ft_move_in(map, 'r');
 }
 
-void	ft_init_move(m_point *map)
+void	ft_init_move(t_point *map)
 {
 	int	i;
 	int	u;

@@ -6,13 +6,13 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:22:31 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/14 18:22:44 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:22:41 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_init_img(m_point *map)
+void	ft_init_img(t_point *map)
 {
 	int	size;
 
@@ -24,7 +24,7 @@ void	ft_init_img(m_point *map)
 	map->ground = mlx_xpm_file_to_image(map->mlx, GROUND, &size, &size);
 }
 
-void	ft_disp_image(m_point *map, int x, int y, char c)
+void	ft_disp_image(t_point *map, int x, int y, char c)
 {
 	if (c == '1')
 		mlx_put_image_to_window(map->mlx, map->win1, map->wall, x, y);
@@ -38,7 +38,7 @@ void	ft_disp_image(m_point *map, int x, int y, char c)
 		mlx_put_image_to_window(map->mlx, map->win1, map->ground, x, y);
 }
 
-void	ft_screen(m_point *map)
+void	ft_screen(t_point *map)
 {
 	int	i;
 	int	u;

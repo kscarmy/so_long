@@ -6,7 +6,7 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:36:17 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/14 18:36:20 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:22:41 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_exor_nfn(int error)
 	return (-1);
 }
 
-void	ft_map_disp_error(m_point *map, int l, int x, int erreur)
+void	ft_map_disp_error(t_point *map, int l, int x, int erreur)
 {
 	int	a;
 	int	c;
@@ -55,7 +55,7 @@ void	ft_map_disp_error(m_point *map, int l, int x, int erreur)
 	map->error = erreur;
 }
 
-void	ft_show_error_file(m_point *map)
+void	ft_show_error_file(t_point *map)
 {
 	int	u;
 	int	j;
@@ -82,7 +82,7 @@ void	ft_show_error_file(m_point *map)
 	}
 }
 
-void	ft_error_detected(m_point *map)
+void	ft_error_detected(t_point *map)
 {
 	printf("\033[0;31m[ERROR n'%d']\n", map->error);
 	if (map->error < 960)

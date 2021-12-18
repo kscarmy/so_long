@@ -6,13 +6,13 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:54:17 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/14 20:09:03 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:22:41 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_create_mapping_bis(m_point *map, int *one)
+int	ft_create_mapping_bis(t_point *map, int *one)
 {
 	int	u;
 
@@ -34,7 +34,7 @@ int	ft_create_mapping_bis(m_point *map, int *one)
 	return (u);
 }
 
-void	ft_create_mapping(m_point *map)
+void	ft_create_mapping(t_point *map)
 {
 	int	u;
 	int	one;
@@ -56,7 +56,7 @@ void	ft_create_mapping(m_point *map)
 	}
 }
 
-void	ft_fill_line_map(m_point *map)
+void	ft_fill_line_map(t_point *map)
 {
 	int	i;
 	int	u;
@@ -80,7 +80,7 @@ void	ft_fill_line_map(m_point *map)
 	}
 }
 
-void	ft_parse_map_bis(m_point *map)
+void	ft_parse_map_bis(t_point *map)
 {
 	int	x;
 
@@ -98,7 +98,7 @@ void	ft_parse_map_bis(m_point *map)
 		map->error = 955;
 }
 
-void	ft_parse_map(m_point *map)
+void	ft_parse_map(t_point *map)
 {
 	int	l;
 	int	x;

@@ -6,7 +6,7 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:55:23 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/15 16:57:52 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:22:41 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_entry_keyboard(int key, void *p)
 {
-	m_point	*map;
+	t_point	*map;
 
 	map = p;
 	if (key == KEY_ECHAP)
@@ -32,13 +32,13 @@ int	ft_entry_keyboard(int key, void *p)
 	return (0);
 }
 
-int	ft_cross_is_red(m_point *map)
+int	ft_cross_is_red(t_point *map)
 {
 	ft_exit_free_all(map, 0);
 	return (0);
 }
 
-void	ft_exit_free_all(m_point *map, int ret)
+void	ft_exit_free_all(t_point *map, int ret)
 {
 	printf("All is begin freeing\n");
 	mlx_destroy_image(map->mlx, map->wall);
@@ -51,7 +51,7 @@ void	ft_exit_free_all(m_point *map, int ret)
 	exit(ft_exit_free_map(map, ret));
 }
 
-void	ft_windows(m_point *map)
+void	ft_windows(t_point *map)
 {
 	map->mlx = mlx_init();
 	map->win1 = mlx_new_window(map->mlx, (ft_strlen(map->map[0]) * CUB_SIZE),

@@ -6,13 +6,13 @@
 /*   By: guderram <guderram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:54:49 by guderram          #+#    #+#             */
-/*   Updated: 2021/12/15 16:57:54 by guderram         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:22:41 by guderram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_verif_something(m_point *map)
+void	ft_verif_something(t_point *map)
 {
 	int	i;
 	int	u;
@@ -40,7 +40,7 @@ void	ft_verif_something(m_point *map)
 	ft_verif_count(map);
 }
 
-void	ft_verif_count(m_point *map)
+void	ft_verif_count(t_point *map)
 {
 	if (map->rx != 1)
 	{
